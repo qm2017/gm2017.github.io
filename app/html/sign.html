@@ -1,0 +1,42 @@
+<ons-page id="signPage">
+  <ons-toolbar>
+    <div class="left">
+      <ons-back-button>还回</ons-back-button>
+    </div>
+    <div class="center">签名</div>
+    <div class="right">
+      <ons-toolbar-button component="button/save">
+        提交签名
+      </ons-toolbar-button>
+    </div>
+  </ons-toolbar>
+
+  <ons-list-header>请填写您的个人信息</ons-list-header>
+  <ons-list>
+    <ons-list-item modifier="nodivider">
+      <ons-if platform="other" class="left left-label">
+        姓名
+      </ons-if>
+      <div class="center">
+        <ons-input id="name-input" modifier="underbar" type="text" placeholder="姓名(请使用实名)"></ons-input>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="nodivider">
+      <ons-if platform="other" class="left left-label">
+        省市职业或毕业院校年级系名
+      </ons-if>
+      <div class="center">
+        <ons-input id="org-input" modifier="underbar" type="text" placeholder="省市职业或毕业院校年级系名"></ons-input>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="nodivider">
+      <ons-if platform="other" class="left left-label">
+        留言
+      </ons-if>
+      <div class="center">
+        <textarea id="comment-input" modifier="underbar" class="textarea textarea--transparent" type="text" placeholder="您的留言"></textarea>
+      </div>
+    </ons-list-item>
+  </ons-list>
+  <div class="center" id="qr"></div>
+</ons-page>

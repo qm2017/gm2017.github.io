@@ -1,0 +1,34 @@
+<ons-page id="commentPage">
+  <ons-toolbar>
+    <div class="left">
+      <ons-back-button>还回</ons-back-button>
+    </div>
+    <div class="center">留言</div>
+    <div class="right">
+      <ons-toolbar-button component="button/save">
+        提交留言
+      </ons-toolbar-button>
+    </div>
+  </ons-toolbar>
+
+  <ons-list-header>请您留言</ons-list-header>
+  <ons-list>
+    <ons-list-item modifier="nodivider">
+      <ons-if platform="other" class="left left-label">
+        个人信息
+      </ons-if>
+      <div class="center">
+        <ons-input id="name-input" modifier="underbar" type="text" placeholder="个人信息"></ons-input>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="nodivider">
+      <ons-if platform="other" class="left left-label">
+        留言
+      </ons-if>
+      <div class="center">
+        <textarea id="comment-input" modifier="underbar" class="textarea textarea--transparent" type="text" placeholder="留言"></textarea>
+      </div>
+    </ons-list-item>
+  </ons-list>
+
+</ons-page>
