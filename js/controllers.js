@@ -3,7 +3,7 @@ myApp.controllers = {
     page.querySelector('#myTabbar').setAttribute('animation', ons.platform.isAndroid() ? 'slide' : 'none');
   },
 
-  homePage: function(page) {
+  petitionPage: function(page) {
     page.querySelector('[component="button/sign"]').onclick = function() {
       document.querySelector('#myNavigator').pushPage('html/sign.html');
     };        
