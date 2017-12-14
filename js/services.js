@@ -40,8 +40,7 @@ myApp.services = {
           data.comment +
           '</span>' +
           '<span class="list-item__subtitle">' +
-          data.name +
-          ' ' + data.ts +
+          data.name + ' ' + data.ts +
           '</span>' +
           '</div>' +
           '</ons-list-item>',
