@@ -41,8 +41,7 @@ myApp.services = {
           '</span>' +
           '<span class="list-item__subtitle">' +
           data.name +
-          ' ' +
-          myApp.services.getDate(data.ts) +
+          ' ' + data.ts +
           '</span>' +
           '</div>' +
           '</ons-list-item>',
@@ -66,27 +65,11 @@ myApp.services = {
           comment: data.comment,
         },
         function(json) {
-          data.ts = new Date().getTime();
+          data.ts = new Date();
           myApp.services.comments.create(data);
           return json;
         },
       )
     },
-  },
-
-  getDate: function(date) {
-    var d = new Date(date);
-    var mon = d.getMonth() + 1;
-    return (
-      d.getFullYear() +
-      '-' +
-      mon +
-      '-' +
-      d.getDate() +
-      ' ' +
-      d.getHours() +
-      ':' +
-      d.getMinutes()
-    );
-  },
+  }
 }
