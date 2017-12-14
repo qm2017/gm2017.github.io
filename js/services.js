@@ -75,7 +75,7 @@ myApp.services = {
   },
 
   getDate: function(date) {
-    var d = new Date(parseInt(date));
+    var d = new Date(date);
     var mon = d.getMonth() + 1;
     return (
       d.getFullYear() +
