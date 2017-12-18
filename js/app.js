@@ -11,7 +11,7 @@ document.addEventListener('init', function(event) {
     if (!document.querySelector('#commentsPage ons-list-item')) {
       myApp.services.comments.get().then(function(comments) {
         var sorted = comments.sort(function(a,b) {
-          return a.ts - b.ts;
+          return b.ts - a.ts;
         })
         sorted.forEach(function(data) {
           myApp.services.comments.create(data);
