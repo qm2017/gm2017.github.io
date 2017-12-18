@@ -47,7 +47,7 @@ myApp.services = {
       );
 
       var commentsList = document.querySelector('#comments-list');
-      commentsList.insertAfter(item, commentsList.lastChild);
+      commentsList.insertBefore(item, commentsList.firstChild);
     },
 
     get: function() {
