@@ -10,7 +10,10 @@ document.addEventListener('init', function(event) {
   if (page.id === 'commentsPage') {
     if (!document.querySelector('#commentsPage ons-list-item')) {
       myApp.services.comments.get().then(function(comments) {
-        comments.forEach(function(data) {
+        var sorted = comments.sort(function(a,b) {
+          return a.ts - b.ts;
+        })
+        sorted.forEach(function(data) {
           myApp.services.comments.create(data);
         });
       })
