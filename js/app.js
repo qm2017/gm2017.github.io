@@ -12,10 +12,10 @@ document.addEventListener('init', function(event) {
       myApp.services.comments.get().then(function(comments) {
         var sorted = comments.sort(function(a, b) {
           if (a.ts < b.ts) {
-            return -1;
+            return 1;
           }
           else if (a.ts > b.ts) {
-            return 1;
+            return -1;
           }
           else {
             return 0;
