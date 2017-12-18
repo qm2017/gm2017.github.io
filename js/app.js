@@ -21,7 +21,7 @@ document.addEventListener('init', function(event) {
             return 0;
           }
         })
-        comments.forEach(function(data) {
+        sorted.forEach(function(data) {
           myApp.services.comments.create(data);
         });
       })
